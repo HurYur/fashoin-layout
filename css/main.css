@@ -7,10 +7,11 @@
 section{
 	min-height: 100vh;
 }
-.top, .top .top-panel, 
-.about, .about .mini-boxes{
+.top, .top .top-panel, .about,
+.about .mini-boxes, .content-boxes{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .top{
 	background-image: url('../img/topBg.jpg');
@@ -66,7 +67,7 @@ a{
 }
 .arrow .fa {
   animation: bounce 2s ease infinite;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .macaroons{
@@ -75,6 +76,7 @@ a{
 }
 .about{
 	background-image: url('../img/aboutBg.jpg');
+	padding: 40px 30px;
 }
 .btn{
     font-size: 25px;
@@ -91,9 +93,13 @@ a{
 .about .content{
 	width: 40%;
 }
+.about .content h2{
+	color: white;
+	margin-bottom: 50px;
+}
 .about .content-boxes{
 	width: 60%;
-	padding: 20px;
+    justify-content: flex-end;
 }
 .about .box{
 	width: 100%;
@@ -111,7 +117,6 @@ a{
 	background-color: rgba(0,0,0,0.4);
 }
 .about .mini-box .inner{
-	min-height: 100px;
 	border: 1px solid #F8BBD0;
 }
 .about .mini-box img{
@@ -132,5 +137,6 @@ a{
 .pulse-btn {
 	box-shadow: 0 0 0 0 rgba(248,187,208, 1);
 	animation: pulse 1.25s infinite;
+	margin: 50px 0;
 }
 
