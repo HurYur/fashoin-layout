@@ -74,6 +74,10 @@ a{
 	height: 100vh;
 	background-color: white;
 }
+.macaroons img{
+	width: 100px;
+	transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
+}
 .about{
 	background-image: url('../img/aboutBg.jpg');
 	padding: 40px 30px;
@@ -140,3 +144,23 @@ a{
 	margin: 50px 0;
 }
 
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+	
+  transform: translateZ(-1px);
+}
