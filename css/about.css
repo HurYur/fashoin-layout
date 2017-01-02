@@ -51,7 +51,7 @@ section{
     margin: 50px 0;
 }
 .part2 .content{
-	width: 600px;
+	max-width: 600px;
 	text-align: center;
 	margin: 0 auto;
 }
@@ -62,14 +62,14 @@ section{
 }
 .part2 .img-bg .img,
 .part3 .img-bg .img{
-	width: 90%;
+	min-width: 90%;
 	min-height: 500px;
 	position: absolute;
 	background-image: url('../img/about_part2.JPG');
 	background-size: cover;
 }
 .bord-box{
-	width: 500px;
+	max-width: 500px;
 	padding: 50px 40px;
 	position: absolute;
 	right: 0;
@@ -114,7 +114,7 @@ section{
 }
 .part4 .flower,
 .part4 .flower img{
-	width: 200px;
+	max-width: 200px;
 }
 .part4 .btn{
 	border: 0;
@@ -150,15 +150,27 @@ section{
 	}
 	.part1 .content small,
 	.part1 .content p{
-	padding-left: 0;
-}
+		padding-left: 0;
+	}
 @media screen and (max-width: 1024px){
 	.part2 .img-bg .img, .part3 .img-bg .img {
-		width: 100%;
+		min-width: 100%;
 	}
 	.bord-box, .part3 .bord-box{
 		left: 50%;
 		transform: translate(-50%, -50%);
 	    background-color: rgba(255,255,255,0.8);
+	}
+}
+@media screen and (max-width: 640px){
+	.bord-box {
+	    width: 100%;
+	    padding: 25px;
+	}
+	.part3 h2 {
+		margin-top: 25px
+	}
+	.part4 .bord-box{
+		justify-content: center;
 	}
 }

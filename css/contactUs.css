@@ -59,6 +59,9 @@
     border: 0;
     background-color: rgba(0,0,0,0.1);
 }
+.contactUs-section input[type="submit"]{
+	padding: 20px 0;
+}
 
 @media screen and (max-width: 640px){
 	.contactUs-section .outer, .blur, .inner{
