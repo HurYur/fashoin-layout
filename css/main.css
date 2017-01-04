@@ -75,7 +75,7 @@ a{
 }
 .macaroons img{
 	width: 100px;
-	transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
+	transform: translateZ(.25px) scale(.75);
 }
 .about{
 	background-size: cover;

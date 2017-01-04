@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<link rel="stylesheet" href="css/main.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 </head>
 <body>
 	<section class="top">
@@ -28,41 +29,29 @@
 
 		<div class="box"></div>
 		<div class="arrow">
-			<a href="#macaroons"><i class="fa fa-chevron-down faa-bounce animated" aria-hidden="true"></i></a>
+			<a href="#macaroons"><i class="fa fa-chevron-down faa-bounce" aria-hidden="true"></i></a>
 		</div>
 	</section>
 	<section id="macaroons" class="macaroons">
-		<div class="macaroon"><img src="img/4_2.png" alt=""></div>
-		<div class="macaroon"><img src="" alt=""></div>
-		<div class="macaroon"><img src="" alt=""></div>
-		
-		<p>text</p>
-		<p>text</p>
-		<p>text</p>
-		<p>text</p>
+		<div class="macaroon"><img width="200px" src="img/4_1.png" alt=""></div>
+		<p>You feel you are creative
+		You have friends who say that you have a good eye</p>
+		<div class="macaroon"><img width="200px" src="img/4_2.png" alt=""></div>
+		<p>You like to create a beauty around you, interior design, etc :)
+		You love fashion, style and shopping;</p>
+		<div class="macaroon"><img width="200px" src="img/4_3.png" alt=""></div>
+		<p>You love to travel
+		You like to be your own boss</p>
+		<div class="macaroon"><img width="200px" src="img/4_4.png" alt=""></div>
+		<p>You do not like work from 9 to 5 and be stuck inside of the office
+		You want to be free to do what you love</p>
 	</section>
 
-
-<div class="parallax">
-  <div class="parallax__layer parallax__layer--back">
-    ...
-    <img src="img/4_2.png" alt="">
-  </div>
-  <div class="parallax__layer parallax__layer--base">
-    ...
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit fugiat ab dolorum vitae, aliquam, laborum eaque praesentium possimus modi natus vel repudiandae esse, neque expedita rem totam. Quos, tenetur, numquam?
-  </div>
-</div>
-
-
-
 	<!-- part 3 -->
-	<!-- animated fadeInUp -->
-
-	<section class="about">
+	<section class="about wow fadeInUp">
 		<!-- left -->
-		<div class="content slideInLeft animated">
-			<h2><em>Hi! <br />
+		<div class="content">
+			<h2 class="wow rotateInDownLeft" data-wow-offset="300" ><em>Hi! <br />
 			I'm Ines Florissant</em></h2>
 			<button class="btn"><a href="#">About</a></button>
 		</div>
@@ -130,8 +119,14 @@ for (var i = 0; i < document.getElementsByClassName('mini-box').length; i++) {
 	});
 }
 </script>
-<script>
-	
+<script>                      
+var wow = new WOW(
+  {
+    offset: 100,
+    live: false
+  }
+);
+wow.init();
 </script>
 </body>
 </html>
