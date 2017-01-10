@@ -97,19 +97,25 @@ section{
 }
 .part4{
 	position: relative;
+	background-image: url('../img/about_part4.png');
+	background-size: cover;
+	padding: 50px 0;
+	z-index: -1;
 }
 .part4 .bord-box{
 	position: static;
 	margin: 0 auto;
+	background-color: rgba(255,255,255,0.8);
     transform: initial;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    z-index: 1;
 }
 .part4 .flower{    
 	z-index: -1;
 	position: absolute;
-	right: 0;
+	left: calc(50% + 150px);
 	bottom: 0;
 }
 .part4 .flower,
@@ -126,6 +132,7 @@ section{
 .part4 button{
 	background-color: #F8BBD0;
 	padding: 20px 50px;
+	margin: 50px auto 0 auto;
 }
 @keyframes pulse {to {box-shadow: 0 0 0 30px rgba(248,187,208, 0);}}
 .pulse-btn {
