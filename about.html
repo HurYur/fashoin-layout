@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<link rel="stylesheet" href="css/about.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 </head>
 <body>
 	<section class="part1">
@@ -49,10 +50,19 @@
 			<p>The program is designed to immerse you in the experience of learning, practicing and becoming proficient in the essential skills of a fashion stylist. It's a transformational program that takes place over 12 lessons to create a monumental impact in your life and the lives of others.</p>
 			<button class="btn pulse-btn"><a href="#">GET CLASS</a></button>
 		</div>
-		<div class="flower">
+		<div class="flower wow rotateInDownLeft" data-wow-offset="200">
 			<img src="img/flower.png" alt="">
 		</div>
 	</section>
 
+<script>                      
+var wow = new WOW(
+  {
+    offset: 100,
+    live: false
+  }
+);
+wow.init();
+</script>
 </body>
 </html>
