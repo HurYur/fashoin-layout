@@ -33,17 +33,17 @@
 		</div>
 	</section>
 	<section id="macaroons" class="macaroons">
-		<div class="macaroon"><img width="200px" src="img/4_1.png" alt=""></div>
-		<p>You feel you are creative
+		
+		<p class="first text wow fadeInUp">You feel you are creative
 		You have friends who say that you have a good eye</p>
-		<div class="macaroon"><img width="200px" src="img/4_2.png" alt=""></div>
-		<p>You like to create a beauty around you, interior design, etc :)
+		
+		<p class="second text wow fadeInUp">You like to create a beauty around you, interior design, etc :)
 		You love fashion, style and shopping;</p>
-		<div class="macaroon"><img width="200px" src="img/4_3.png" alt=""></div>
-		<p>You love to travel
+		
+		<p class="third text wow fadeInUp">You love to travel
 		You like to be your own boss</p>
-		<div class="macaroon"><img width="200px" src="img/4_4.png" alt=""></div>
-		<p>You do not like work from 9 to 5 and be stuck inside of the office
+		
+		<p class="fourth text wow fadeInUp">You do not like work from 9 to 5 and be stuck inside of the office
 		You want to be free to do what you love</p>
 	</section>
 
@@ -63,38 +63,29 @@
 			<div class="mini-boxes">
 				<div id="0" class="mini-box 0">
 					<div class="inner">
-						<img src="http://lorempixel.com/400/400/fashion/" alt="">
+						<img src="img/calendar.png" alt="">
 					</div>
 					<p>Learn on your schedule</p>
 				</div>
-				<div id="1" class="mini-box 1">
-					<div class="inner">
-						<img src="http://lorempixel.com/400/400/fashion/" alt="">
-					</div>
-					<p>7 Interactive video trainings</p>
-				</div>
-				<div id="2" class="mini-box 2">
-					<div class="inner">
-						<img src="http://lorempixel.com/400/400/fashion/" alt="">
-					</div>
-					<p>Become a best version of yourself</p>
-				</div>
-				<div id="3" class="mini-box 3">
-					<div class="inner">
-						<img src="http://lorempixel.com/400/400/fashion/" alt="">
-					</div>
+				<div id="1" class="mini-box 3">
+					<img src="img/hours.png" alt="">
 					<p>24 hours a day, 7 days a week support</p>
 				</div>
+				<div id="2" class="mini-box 1">
+					<img src="img/phone.png" alt="">
+					<p>7 Interactive video trainings</p>
+				</div>
+				<div id="3" class="mini-box 2">
+					<img src="img/star.png" alt="">
+					<p>Become a best version of yourself</p>
+				</div>
+
 				<div id="4" class="mini-box 4">
-					<div class="inner">
-						<img src="http://lorempixel.com/400/400/fashion/" alt="">
-					</div>
+					<img src="img/lock.png" alt="">
 					<p>365 days access to class</p>
 				</div>
 				<div id="5" class="mini-box 5">
-					<div class="inner">
-						<img src="http://lorempixel.com/400/400/fashion/" alt="">
-					</div>
+					<img src="img/certificate.png" alt="">
 					<p>Certificate of completion</p>
 				</div>
 			</div>
@@ -108,9 +99,9 @@
 //@mb todo - searching through node count if it's possible
 var someText = [
 "We recognize that people learn best at certain times: some people are early birds others are night owls. No matter what time of day or night, we are open 24 hours to cater to your learning needs so that you can immediately accelerate the pace at which you achieve the results you desire.", 
-"7 video lessons that include a step by step guide of memorable coaching techniques to bring out optimum comprehension and give you the ability to unleash the best version of yourself with confidence and competence.", 
-"The course covers the core essentials of fashion, image branding and coaching. “How to become a fashion stylist” is a total fashion program designed as a launch pad to catapult your dreams into reality.", 
 "Capitalize on a once in a lifetime opportunity of inspiration and support as you tap into insights that will help you push past obstacles so that you can achieve your goals far faster than you may have imagined.", 
+"12 video lessons that include a step by step guide of memorable coaching techniques to bring out optimum comprehension and give you the ability to unleash the best version of yourself with confidence and competence.", 
+"The course covers the core essentials of fashion, image branding and coaching. “How to become a fashion stylist” is a total fashion program designed as a launch pad to catapult your dreams into reality.", 
 "Reputation is the mother of skill. Thus, you will have access to classes for a whole year to immerse yourself in and create amazing new levels of satisfaction along with having essential strategies for massive achievement at your fingertips.", 
 "As an ultimate symbol for your newly emerging skills, upon completion of the program, you will receive an email of your professional certification."];
 for (var i = 0; i < document.getElementsByClassName('mini-box').length; i++) {
@@ -127,6 +118,18 @@ var wow = new WOW(
   }
 );
 wow.init();
+</script>
+<script>
+// 	window.addEventListener('scroll', function (e) {
+// 	console.log(document.getElementById('macaroons').scrollTop);
+  
+//   var $parallax = document.getElementById('macaroons');
+//   var posY = $parallax.scrollHeight/document.body.scrollTop * 100;
+//   if (posY < 100){
+//   	$parallax.style.backgroundPositionY = posY+'%';
+//   }
+  
+// })
 </script>
 </body>
 </html>

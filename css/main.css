@@ -71,16 +71,41 @@ a{
 
 .macaroons{
 	height: 100vh;
-	background-color: white;
+	background-color: rgb(204, 188, 194);
+	background-image: url('../img/4_1.png'), url('../img/4_2.png'), url('../img/4_3.png'), url('../img/4_4.png');
+	background-size: cover;
+	position: relative;
+
 }
 .macaroons img{
 	width: 100px;
 	transform: translateZ(.25px) scale(.75);
 }
+.macaroons .text{
+	width: 250px;
+	position: absolute;
+}
+.macaroons .text.first{
+	top: 15vh;
+    right: 50px;
+}
+.macaroons .text.second{
+	top: 50vh;
+    right: 50px;
+}
+.macaroons .text.third{
+    top: 30vh;
+    right: 650px;
+}
+.macaroons .text.fourth{
+	top: 80vh;
+	right: 850px;
+}
 .about{
-	background-size: cover;
-	background-image: url('../img/aboutBg.jpg');
-	padding: 40px 30px;
+	background-image: url(../img/aboutBg.jpg);
+    padding: 40px 30px;
+    background-position-x: -300px;
+    background-repeat: no-repeat;
 }
 .btn{
     font-size: 25px;
@@ -122,20 +147,19 @@ a{
 	width: 30%;
 	margin-bottom: 10px; 
 	background-color: rgba(0,0,0,0.4);
-}
-.about .mini-box .inner{
 	border: 1px solid #F8BBD0;
-}
-.about .mini-box img{
-	width: 100%;
-	filter: gray; /* IE6-9 */
+    padding: 30px;
+    filter: gray; /* IE6-9 */
 	filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
 	-webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+}
+.about .mini-box img{
+	width: 100px;
 
 }
 
 /* Disable grayscale on hover */
-.about .mini-box img:hover {
+.about .mini-box:hover {
 	filter: none;
 	-webkit-filter: grayscale(0);
 }
