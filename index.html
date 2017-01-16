@@ -10,7 +10,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 </head>
 <body>
-	<section class="top">
+	<section id="top" class="top">
 		<div class="top-panel">
 			<div class="logo">
 				<img src="img/logo.png" alt="logo">
@@ -33,7 +33,13 @@
 		</div>
 	</section>
 	<section id="macaroons" class="macaroons">
-		
+		<div class="fly">
+			<img id="macaroon1" src="img/4_1.png" alt="">
+			<img id="macaroon2" src="img/4_2.png" alt="">
+			<img id="macaroon3" src="img/4_3.png" alt="">
+			<img id="macaroon4" src="img/4_4.png" alt="">
+		</div>
+
 		<p class="first text wow fadeInUp">You feel you are creative
 		You have friends who say that you have a good eye</p>
 		
@@ -79,7 +85,6 @@
 					<img src="img/star.png" alt="">
 					<p>Become a best version of yourself</p>
 				</div>
-
 				<div id="4" class="mini-box 4">
 					<img src="img/lock.png" alt="">
 					<p>365 days access to class</p>
@@ -94,7 +99,7 @@
 
 	</section>
 
-<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
 //@mb todo - searching through node count if it's possible
 var someText = [
@@ -113,11 +118,52 @@ for (var i = 0; i < document.getElementsByClassName('mini-box').length; i++) {
 <script>                      
 var wow = new WOW(
   {
-    offset: 100,
+    offset: 200,
     live: false
   }
 );
 wow.init();
+</script>
+<script>
+var rotate = 0;
+var topImg = 0;
+
+var lastScrollTop = 0;
+var $parallax = document.querySelectorAll(".fly img")
+	window.addEventListener('scroll', function (e) {
+		var scrollTop = document.body.scrollTop;
+		console.log(scrollTop)
+		if (scrollTop + 100 > document.getElementById('top').scrollHeight) {
+			rotate = (scrollTop - document.getElementById('top').scrollHeight + 100) * 0.05;
+			topImg = (scrollTop - document.getElementById('top').scrollHeight + 100) * 0.140;
+
+
+			// scroll down
+
+			// if (lastScrollTop < scrollTop) {
+			// 	rotate += 0.2;
+			// 	topImg += 0.5;
+			// // scroll up
+			// }else{
+			// 	rotate -= 0.2;
+			// 	topImg -= 0.2;
+			// }
+			for (var i = 0; i < $parallax.length; i++) {
+			$parallax[i].style.transform = 'translate3d(0px,'+ topImg +'px, 0px) rotate(' + rotate + 'deg)';
+				//$parallax[i].style.top = parseInt($parallax[i].style.top) + top + 'px';
+			}
+			lastScrollTop = scrollTop;
+		}
+  
+  // var posY = $parallax.scrollHeight/document.body.scrollTop * 100;
+  // if (posY < 100){
+  // 	$parallax.style.backgroundPositionY = posY+'%';
+  // }
+  
+})
+
+//$('#leftgear').css({ transform: 'rotate(' + theta + 'rad)' });
+
 </script>
 <script>
 // 	window.addEventListener('scroll', function (e) {

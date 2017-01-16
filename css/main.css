@@ -70,32 +70,58 @@ a{
 }
 
 .macaroons{
-	height: 100vh;
+	height: 120vh;
+	padding: 50px;
 	background-color: rgb(204, 188, 194);
-	background-image: url('../img/4_1.png'), url('../img/4_2.png'), url('../img/4_3.png'), url('../img/4_4.png');
-	background-size: cover;
 	position: relative;
-
+}
+.macaroons .fly{
+	width: 960px;
+	width: 960px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+#macaroon1{
+	right: 200px;
+}
+#macaroon2{
+	right: 80px;
+    top: 170px;
+}
+#macaroon3{
+	width: 120px;
+    right: 460px;
+    top: 320px;
+}
+#macaroon4{
+	width: 360px;
+    top: 370px;
+    right: 100px;
 }
 .macaroons img{
-	width: 100px;
-	transform: translateZ(.25px) scale(.75);
+	width: 200px;
+	transition: all 0.5s ease;
+	position: absolute;
 }
 .macaroons .text{
 	width: 250px;
 	position: absolute;
+    color: white;
+    font-weight: bold;
+    text-align: center;
 }
 .macaroons .text.first{
 	top: 15vh;
     right: 50px;
 }
 .macaroons .text.second{
-	top: 50vh;
+	top: 65vh;
     right: 50px;
 }
 .macaroons .text.third{
-    top: 30vh;
-    right: 650px;
+    top: 40vh;
+    right: 550px;
 }
 .macaroons .text.fourth{
 	top: 80vh;
@@ -169,25 +195,4 @@ a{
 	box-shadow: 0 0 0 0 rgba(248,187,208, 1);
 	animation: pulse 1.25s infinite;
 	margin: 50px 0;
-}
-
-.parallax {
-  perspective: 1px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-.parallax__layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.parallax__layer--base {
-  transform: translateZ(0);
-}
-.parallax__layer--back {
-	
-  transform: translateZ(-1px);
 }
