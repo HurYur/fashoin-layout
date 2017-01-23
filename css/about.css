@@ -1,11 +1,25 @@
-@import url('https://fonts.googleapis.com/css?family=Courgette');
-
+@font-face {
+    font-family: 'Dejavu';
+    src: url('../fonts/DejaVuSans-ExtraLight-webfont.eot');
+    src: url('../fonts/DejaVuSans-ExtraLight-webfont.woff') format('woff'),
+         url('../fonts/DejaVuSans-ExtraLight-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {font-family: "Devanagari";
+    src: url("../fonts/Adobe-Devanagari.eot");
+    src: url("../fonts/Adobe-Devanagari.woff") format("woff"),
+    	 url("../fonts/Adobe-Devanagari.ttf") format("ttf");
+}
 *{
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: Arial;
+	font-family: Devanagari, Arial;
 	font-size: 18px;
+}
+button{
+	font-family: dejavu, Arial;
 }
 section{
 	min-height: 100vh;

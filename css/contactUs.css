@@ -1,9 +1,36 @@
+@font-face {
+    font-family: 'Dejavu';
+    src: url('../fonts/DejaVuSans-ExtraLight-webfont.eot');
+    src: url('../fonts/DejaVuSans-ExtraLight-webfont.woff') format('woff'),
+         url('../fonts/DejaVuSans-ExtraLight-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {font-family: "Devanagari";
+    src: url("../fonts/Adobe-Devanagari.eot");
+    src: url("../fonts/Adobe-Devanagari.woff") format("woff"),
+       url("../fonts/Adobe-Devanagari.ttf") format("ttf");
+}
 *{
 	padding: 0;
 	margin: 0;
-	font-family: verdana, arial;
+	font-family: Devanagari, arial;
 	box-sizing: border-box;
-    font-size: 18px;
+  font-size: 18px;
+}
+::-webkit-input-placeholder { /* Chrome */
+  color: rgb(206, 206, 206);
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: rgb(206, 206, 206);
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: rgb(206, 206, 206);
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: rgb(206, 206, 206);
+  opacity: 1;
 }
 .contactUs-section{
 	width: 100%;

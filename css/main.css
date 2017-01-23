@@ -1,8 +1,24 @@
+@font-face {
+    font-family: 'Dejavu';
+    src: url('../fonts/DejaVuSans-ExtraLight-webfont.eot');
+    src: url('../fonts/DejaVuSans-ExtraLight-webfont.woff') format('woff'),
+         url('../fonts/DejaVuSans-ExtraLight-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {font-family: "Devanagari";
+    src: url("../fonts/Adobe-Devanagari.eot");
+    src: url("../fonts/Adobe-Devanagari.woff") format("woff"),
+    	 url("../fonts/Adobe-Devanagari.ttf") format("ttf");
+}
 *{
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: Arial;
+	font-family: Devanagari, Arial;
+}
+button a{
+	font-family: Dejavu, Arial;
 }
 section{
 	min-height: 100vh;
@@ -13,16 +29,39 @@ section{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.top{
+.top-background{
+	background-size: cover;
+}
+.top-background, .about-background{
+    filter: gray;
+	filter: grayscale(1);
+	-webkit-filter: grayscale(1);
 	background-image: url('../img/topBg.jpg');
-    background-size: cover;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: -1;
+}
+
+/* Disable grayscale on hover */
+.top-background.colored,
+.about-background.colored{
+	filter: none;
+	-webkit-filter: grayscale(0);
+	transition: all 0.5s ease;
+}
+.top{
     flex-direction: column;
 }
 .top .logo img{
 	height: 50px;
 }
 .top .top-panel{
-	background-color: rgba(0,0,0,0.7);
+	margin-top: 10px;
+	position: fixed;
+    width: 100%;
+    z-index: 100;
+	background-color: rgba(255,255,255,0.6);
 	align-items: center;
 	padding: 10px 20px
 }
@@ -70,10 +109,12 @@ a{
 }
 
 .macaroons{
-	height: 120vh;
+	min-height: 840px;
 	padding: 50px;
-	background-color: rgb(204, 188, 194);
 	position: relative;
+	overflow: hidden;
+	background-image: url(../img/macaroonBg.jpg);
+	background-size: cover;
 }
 .macaroons .fly{
 	width: 960px;
@@ -90,24 +131,29 @@ a{
     top: 170px;
 }
 #macaroon3{
-	width: 120px;
+	width: 170px;
     right: 460px;
     top: 320px;
 }
 #macaroon4{
-	width: 360px;
+	width: 220px;
     top: 370px;
-    right: 100px;
+    right: 260px;
+}
+#macaroon5{
+	width: 250px;
+    top: 320px;
+    right: 80px;
 }
 .macaroons img{
-	width: 200px;
+	width: 180px;
 	transition: all 0.5s ease;
 	position: absolute;
 }
 .macaroons .text{
 	width: 250px;
 	position: absolute;
-    color: white;
+    color: black;
     font-weight: bold;
     text-align: center;
 }
@@ -127,11 +173,14 @@ a{
 	top: 80vh;
 	right: 850px;
 }
-.about{
+.about-background{
 	background-image: url(../img/aboutBg.jpg);
     padding: 40px 30px;
     background-position-x: -300px;
     background-repeat: no-repeat;
+}
+.about h2{
+	font-family: Arial;
 }
 .btn{
     font-size: 25px;
@@ -158,7 +207,7 @@ a{
 }
 .about .box{
 	width: 100%;
-    min-height: 250px;
+    min-height: 200px;
     margin: 10px 0;
     background-color: rgba(248, 187, 208, 0.8);
     text-align: center;
@@ -175,19 +224,16 @@ a{
 	background-color: rgba(0,0,0,0.4);
 	border: 1px solid #F8BBD0;
     padding: 30px;
-    filter: gray; /* IE6-9 */
-	filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
-	-webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
 }
 .about .mini-box img{
-	width: 100px;
-
+	width: 84px;
+    transform: scale(0.85);
+    transition: all .3s ease-in-out;
 }
+.about .mini-box img:hover{
+	width: 84px;
+    transform: scale(1);
 
-/* Disable grayscale on hover */
-.about .mini-box:hover {
-	filter: none;
-	-webkit-filter: grayscale(0);
 }
 
 @keyframes pulse {to {box-shadow: 0 0 0 30px rgba(248,187,208, 0);}}

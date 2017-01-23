@@ -11,6 +11,7 @@
 </head>
 <body>
 	<section id="top" class="top">
+		<div id="top-background" class="top-background"></div>
 		<div class="top-panel">
 			<div class="logo">
 				<img src="img/logo.png" alt="logo">
@@ -27,7 +28,7 @@
 			</nav>
 		</div>
 
-		<div class="box"></div>
+		<div id="top-box" class="box"></div>
 		<div class="arrow">
 			<a href="#macaroons"><i class="fa fa-chevron-down faa-bounce" aria-hidden="true"></i></a>
 		</div>
@@ -38,6 +39,7 @@
 			<img id="macaroon2" src="img/4_2.png" alt="">
 			<img id="macaroon3" src="img/4_3.png" alt="">
 			<img id="macaroon4" src="img/4_4.png" alt="">
+			<img id="macaroon5" src="img/4_5.png" alt="">
 		</div>
 
 		<p class="first text wow fadeInUp">You feel you are creative
@@ -55,11 +57,14 @@
 
 	<!-- part 3 -->
 	<section class="about wow fadeInUp">
+		<div id="about-background" class="about-background">
+			
+		</div>
 		<!-- left -->
 		<div class="content">
 			<h2 class="wow rotateInDownLeft" data-wow-offset="300" ><em>Hi! <br />
 			I'm Ines Florissant</em></h2>
-			<button class="btn"><a href="#">About</a></button>
+			<button class="btn pulse-btn"><a href="#">GET STARTED</a></button>
 		</div>
 		<!-- right -->
 		<div class="content-boxes">
@@ -67,34 +72,33 @@
 				<h2>Standart text</h2>
 			</div>
 			<div class="mini-boxes">
-				<div id="0" class="mini-box 0">
+				<div id="0" class="mini-box wow fadeInUp">
 					<div class="inner">
 						<img src="img/calendar.png" alt="">
 					</div>
 					<p>Learn on your schedule</p>
 				</div>
-				<div id="1" class="mini-box 3">
+				<div id="1" class="mini-box wow fadeInUp">
 					<img src="img/hours.png" alt="">
 					<p>24 hours a day, 7 days a week support</p>
 				</div>
-				<div id="2" class="mini-box 1">
+				<div id="2" class="mini-box wow fadeInUp">
 					<img src="img/phone.png" alt="">
 					<p>7 Interactive video trainings</p>
 				</div>
-				<div id="3" class="mini-box 2">
+				<div id="3" class="mini-box wow fadeInUp">
 					<img src="img/star.png" alt="">
 					<p>Become a best version of yourself</p>
 				</div>
-				<div id="4" class="mini-box 4">
+				<div id="4" class="mini-box wow fadeInUp">
 					<img src="img/lock.png" alt="">
 					<p>365 days access to class</p>
 				</div>
-				<div id="5" class="mini-box 5">
+				<div id="5" class="mini-box wow fadeInUp">
 					<img src="img/certificate.png" alt="">
 					<p>Certificate of completion</p>
 				</div>
 			</div>
-			<button class="btn pulse-btn"><a href="#">GET STARTED</a></button>
 		</div>
 
 	</section>
@@ -111,11 +115,16 @@ var someText = [
 "As an ultimate symbol for your newly emerging skills, upon completion of the program, you will receive an email of your professional certification."];
 for (var i = 0; i < document.getElementsByClassName('mini-box').length; i++) {
 	document.getElementsByClassName('mini-box')[i].addEventListener('mouseover', function(){
-        document.getElementById('mini-box-text').innerHTML = '<h1>'+ someText[this.id] + '</h2>'
+        document.getElementById('mini-box-text').innerHTML = '<h3>'+ someText[this.id] + '</h3grey>';
+        document.getElementById('about-background').className += " colored";
 	});
-}
+	document.getElementsByClassName('mini-box')[i].addEventListener('mouseout', function(){
+	    document.getElementById('about-background').className = "about-background";
+	});
+};
 </script>
-<script>                      
+<script>
+//wow scorlling settings                 
 var wow = new WOW(
   {
     offset: 200,
@@ -125,57 +134,32 @@ var wow = new WOW(
 wow.init();
 </script>
 <script>
-var rotate = 0;
-var topImg = 0;
+/*Macaroon paralax*/
+var rotate = 0,
+    topImg = 0,
+    lastScrollTop = 0,
+    $parallax = document.querySelectorAll(".fly img")
+window.addEventListener('scroll', function(e) {
+    var scrollTop = document.body.scrollTop;
+    if (scrollTop + 100 > document.getElementById('top').scrollHeight) {
+        rotate = (scrollTop - document.getElementById('top').scrollHeight + 100) * 0.05;
+        topImg = (scrollTop - document.getElementById('top').scrollHeight + 100) * 0.140;
 
-var lastScrollTop = 0;
-var $parallax = document.querySelectorAll(".fly img")
-	window.addEventListener('scroll', function (e) {
-		var scrollTop = document.body.scrollTop;
-		console.log(scrollTop)
-		if (scrollTop + 100 > document.getElementById('top').scrollHeight) {
-			rotate = (scrollTop - document.getElementById('top').scrollHeight + 100) * 0.05;
-			topImg = (scrollTop - document.getElementById('top').scrollHeight + 100) * 0.140;
-
-
-			// scroll down
-
-			// if (lastScrollTop < scrollTop) {
-			// 	rotate += 0.2;
-			// 	topImg += 0.5;
-			// // scroll up
-			// }else{
-			// 	rotate -= 0.2;
-			// 	topImg -= 0.2;
-			// }
-			for (var i = 0; i < $parallax.length; i++) {
-			$parallax[i].style.transform = 'translate3d(0px,'+ topImg +'px, 0px) rotate(' + rotate + 'deg)';
-				//$parallax[i].style.top = parseInt($parallax[i].style.top) + top + 'px';
-			}
-			lastScrollTop = scrollTop;
-		}
-  
-  // var posY = $parallax.scrollHeight/document.body.scrollTop * 100;
-  // if (posY < 100){
-  // 	$parallax.style.backgroundPositionY = posY+'%';
-  // }
-  
-})
-
-//$('#leftgear').css({ transform: 'rotate(' + theta + 'rad)' });
-
+        for (var i = 0; i < $parallax.length; i++) {
+            $parallax[i].style.transform = 'translate3d(0px,' + topImg + 'px, 0px) rotate(' + rotate + 'deg)';
+        }
+        lastScrollTop = scrollTop;
+    }
+});
 </script>
 <script>
-// 	window.addEventListener('scroll', function (e) {
-// 	console.log(document.getElementById('macaroons').scrollTop);
-  
-//   var $parallax = document.getElementById('macaroons');
-//   var posY = $parallax.scrollHeight/document.body.scrollTop * 100;
-//   if (posY < 100){
-//   	$parallax.style.backgroundPositionY = posY+'%';
-//   }
-  
-// })
+/*background color changing*/
+document.getElementById('top-box').addEventListener('mouseover', function(){
+    document.getElementById('top-background').className += " colored";
+});
+document.getElementById('top-box').addEventListener('mouseout', function(){
+    document.getElementById('top-background').className = "top-background";
+});
 </script>
 </body>
 </html>
