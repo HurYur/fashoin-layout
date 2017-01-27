@@ -36,23 +36,23 @@
 	<section id="macaroons" class="macaroons">
 		<div class="fly">
 			<img id="macaroon1" src="img/4_1.png" alt="">
+			<p class="first text wow fadeInUp">You feel you are creative
+		You have friends who say that you have a good eye</p>
 			<img id="macaroon2" src="img/4_2.png" alt="">
+			<p class="second text wow fadeInUp">You like to create a beauty around you, interior design, etc :)		You love fashion, style and shopping;</p>
 			<img id="macaroon3" src="img/4_3.png" alt="">
+			<p class="third text wow fadeInUp">You love to travel You like to be your own boss</p>
+		
 			<img id="macaroon4" src="img/4_4.png" alt="">
+			<p class="fourth text wow fadeInUp">You do not like work from 9 to 5 and be stuck inside of the office You want to be free to do what you love</p>
 			<img id="macaroon5" src="img/4_5.png" alt="">
 		</div>
 
-		<p class="first text wow fadeInUp">You feel you are creative
-		You have friends who say that you have a good eye</p>
+
 		
-		<p class="second text wow fadeInUp">You like to create a beauty around you, interior design, etc :)
-		You love fashion, style and shopping;</p>
+
 		
-		<p class="third text wow fadeInUp">You love to travel
-		You like to be your own boss</p>
-		
-		<p class="fourth text wow fadeInUp">You do not like work from 9 to 5 and be stuck inside of the office
-		You want to be free to do what you love</p>
+
 	</section>
 
 	<!-- part 3 -->
@@ -73,9 +73,7 @@
 			</div>
 			<div class="mini-boxes">
 				<div id="0" class="mini-box wow fadeInUp">
-					<div class="inner">
-						<img src="img/calendar.png" alt="">
-					</div>
+					<img src="img/calendar.png" alt="">
 					<p>Learn on your schedule</p>
 				</div>
 				<div id="1" class="mini-box wow fadeInUp">
@@ -135,22 +133,24 @@ wow.init();
 </script>
 <script>
 /*Macaroon paralax*/
-var rotate = 0,
-    topImg = 0,
-    lastScrollTop = 0,
-    $parallax = document.querySelectorAll(".fly img")
-window.addEventListener('scroll', function(e) {
-    var scrollTop = document.body.scrollTop;
-    if (scrollTop + 100 > document.getElementById('top').scrollHeight) {
-        rotate = (scrollTop - document.getElementById('top').scrollHeight + 100) * 0.05;
-        topImg = (scrollTop - document.getElementById('top').scrollHeight + 100) * 0.140;
+if (window.innerWidth > 959) {
+	var rotate = 0,
+	    topImg = 0,
+	    lastScrollTop = 0,
+	    $parallax = document.querySelectorAll(".fly img")
+	window.addEventListener('scroll', function(e) {
+	    var scrollTop = document.body.scrollTop;
+	    if (scrollTop + 100 > document.getElementById('top').scrollHeight) {
+	        rotate = (scrollTop - document.getElementById('top').scrollHeight + 100) * 0.05;
+	        topImg = (scrollTop - document.getElementById('top').scrollHeight + 100) * 0.140;
 
-        for (var i = 0; i < $parallax.length; i++) {
-            $parallax[i].style.transform = 'translate3d(0px,' + topImg + 'px, 0px) rotate(' + rotate + 'deg)';
-        }
-        lastScrollTop = scrollTop;
-    }
-});
+	        for (var i = 0; i < $parallax.length; i++) {
+	            $parallax[i].style.transform = 'translate3d(0px,' + topImg + 'px, 0px) rotate(' + rotate + 'deg)';
+	        }
+	        lastScrollTop = scrollTop;
+	    }
+	});
+}
 </script>
 <script>
 /*background color changing*/

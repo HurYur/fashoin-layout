@@ -23,7 +23,7 @@ button a{
 section{
 	min-height: 100vh;
 }
-.top, .top .top-panel, .about,
+.top .top-panel, .about,
 .about .mini-boxes, .content-boxes{
     display: flex;
     justify-content: space-between;
@@ -50,9 +50,6 @@ section{
 	-webkit-filter: grayscale(0);
 	transition: all 0.5s ease;
 }
-.top{
-    flex-direction: column;
-}
 .top .logo img{
 	height: 50px;
 }
@@ -63,7 +60,7 @@ section{
     z-index: 100;
 	background-color: rgba(255,255,255,0.6);
 	align-items: center;
-	padding: 10px 20px
+	padding: 5px 20px;
 }
 .top .main-nav li{
 	display: inline;
@@ -89,7 +86,11 @@ a{
 .top .arrow{
 	color: #F8BBD0;
 	text-align: center;
-	font-size: 25px;
+	font-size: 25px;   
+	position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateY(-50%);
 }
 /* Arrow animation*/
 @keyframes bounce {
@@ -117,7 +118,6 @@ a{
 	background-size: cover;
 }
 .macaroons .fly{
-	width: 960px;
 	width: 960px;
     height: 100%;
     margin: 0 auto;
@@ -194,20 +194,23 @@ a{
 .btn a{
 	padding: 5px 10px;
 }
-.about .content{
-	width: 40%;
+.about .content,
+.about .content-boxes{
+	width: 50%;
+	padding: 100px 40px 20px 40px;
 }
 .about .content h2{
 	color: white;
 	margin-bottom: 50px;
 }
 .about .content-boxes{
-	width: 60%;
     justify-content: flex-end;
 }
 .about .box{
+    display: flex;
+    align-items: center;
 	width: 100%;
-    min-height: 200px;
+    height: 150px;
     margin: 10px 0;
     background-color: rgba(248, 187, 208, 0.8);
     text-align: center;
@@ -220,10 +223,10 @@ a{
 .about .mini-box{
 	color: #F8BBD0;
 	width: 30%;
-	margin-bottom: 10px; 
+	margin-bottom: 20px; 
 	background-color: rgba(0,0,0,0.4);
 	border: 1px solid #F8BBD0;
-    padding: 30px;
+    padding: 15px;
 }
 .about .mini-box img{
 	width: 84px;
@@ -233,7 +236,6 @@ a{
 .about .mini-box img:hover{
 	width: 84px;
     transform: scale(1);
-
 }
 
 @keyframes pulse {to {box-shadow: 0 0 0 30px rgba(248,187,208, 0);}}
@@ -241,4 +243,67 @@ a{
 	box-shadow: 0 0 0 0 rgba(248,187,208, 1);
 	animation: pulse 1.25s infinite;
 	margin: 50px 0;
+}
+@media screen and (max-width: 1024px) {
+	.about .content,
+	.about .content-boxes{
+		width: 50%;
+	}
+	.about .content{
+		width: 40%
+	}
+	.about .content-boxes{
+		width: 60%
+	}
+}
+@media screen and (max-width: 960px) {
+	.macaroons{
+		padding: 50px 0;
+	}
+	.macaroons .fly{
+		width: 100%;
+	}
+	.macaroons img {
+		display: block;
+		position: static;
+		margin: 10px auto;
+	}
+	.macaroons .text{
+		position: static;
+		margin: 20px auto;
+	}
+	.about .content-boxes {
+		align-items: flex-end; 
+	}
+	.about .content-boxes .box{
+		display: none;
+	}
+	.about-background{
+		background-position-y: -90px;
+	}
+	.about .content h2 {
+		margin: 50px 0;
+	}
+	.about .btn{
+		margin: 0;
+	}
+
+}
+@media screen and (max-width: 768px) {
+	.about .content{
+		display: none;
+	}
+	.about .content, .about .content-boxes{
+		width: 100%;
+	}
+	.about .content-boxes{
+		padding-top: 135px;
+	}
+	.about .mini-box {
+		width: 45%;
+	}
+	.about{
+		background-image: url(../img/aboutBg.jpg);
+		background-size: cover;
+	}
 }
