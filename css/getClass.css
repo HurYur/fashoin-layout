@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Dejavu';
+    src: url('../fonts/DejaVuSans-ExtraLight-webfont.eot');
+    src: url('../fonts/DejaVuSans-ExtraLight-webfont.woff') format('woff'),
+         url('../fonts/DejaVuSans-ExtraLight-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {font-family: "Devanagari";
+    src: url("../fonts/Adobe-Devanagari.eot");
+    src: url("../fonts/Adobe-Devanagari.woff") format("woff"),
+    	 url("../fonts/Adobe-Devanagari.ttf") format("ttf");
+}
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Devanagari, Arial;
+}
+a{
+	color: #F8BBD0;
+	text-decoration: none;
+	display: inline-block;
+}
+button a{
+	font-family: Dejavu, Arial;
+}
+section{
+	min-height: 100vh;
+	padding: 40px;
+}
+.first{
+	display: flex;
+    justify-content: flex-end;
+    background-image: url(../img/getClassS1Bg.jpg);
+    background-size: cover;
+}
+.first h1{
+	font-size: 40px;
+}
+.first form{
+	background-color: #F8BBD0;
+	padding: center;
+	text-align: center;
+}
+.first input{
+	display: inline-block;
+	padding: 10px;
+}
+.first .arrow{
+	color: #F8BBD0;
+	text-align: center;
+	font-size: 25px;   
+	position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateY(-50%);
+}
+@keyframes bounce {
+  0%, 10%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+.arrow .fa {
+  animation: bounce 2s ease infinite;
+  font-size: 30px;
+}
+.second{
+	background-image: url(../img/getClassS2Bg.jpg);
+	background-size: cover;
+}
+.second p{
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+}
+.third{
+	padding: 40px 0;
+}
+.third .diagonal-image{
+	position: relative;
+}
+.third h2{
+	position: absolute;
+    right: 200px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+}
+.third .text{
+	text-align: center;
+	padding: 30px;
+	font-size: 22px;
+}
+.third .pink-box{
+	background-color: #F8BBD0;
+	padding: 30px 40px;
+	text-align: center;
+}
+@keyframes draw {
+	from{stroke-dashoffset: 0;}
+	to{stroke-dashoffset: 635;}
+}
+path {
+    stroke-dasharray: 635;
+    animation: draw 2.5s reverse;
+    fill: none;
+    stroke: #000;
+    stroke-width: 3.5px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.fourth h2{
+	font-size: 40px;
+}
+.fourth li{
+   list-style: none;
+   display: flex;
+   align-items: center;
+   margin: 25px 0;
+   font-size: 20px;
+   text-transform: uppercase;
+}
+.fourth li:before{
+   content: '';
+   margin-right: 10px;
+   display: inline-block;
+   width: 50px;
+   height: 50px;
+   background-image: url(../img/check.png);
+   background-size: cover;
+   transition: all 0.5s ease;
+}
+.fourth li:hover:before{
+   width: 70px;
+   height: 70px;
+}
+.btn{
+    font-size: 25px;
+	color: white;
+	background-color: #F8BBD0;
+	border: 0;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+.btn a{
+	padding: 5px 10px;
+	color: white;
+}
+
+@keyframes pulse {to {box-shadow: 0 0 0 30px rgba(248,187,208, 0);}}
+.pulse-btn {
+	box-shadow: 0 0 0 0 rgba(248,187,208, 1);
+	animation: pulse 1.25s infinite;
+	margin: 50px 0;
+}
