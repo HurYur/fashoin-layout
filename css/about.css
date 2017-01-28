@@ -173,16 +173,21 @@ path {
 	.part1 .content{
 		right: 40px;
 	}
+	.part2 .img-bg .img, 
+	.part3 .img-bg .img {
+		min-width: 80%;
+	}
 }
 @media screen and (max-width: 1024px){
 	.part1{
 		display: flex;
 		justify-content: center;
 		align-items: center;    
-		background-size: 1555px;
-    	background-position-x: -550px;
+		background-size: 1355px;
+	    background-position-x: -330px;
 	}
 	.part1 .content{
+	    width: 400px;
 	    background-color: rgba(255,255,255,0.8);
 	    padding: 40px 20px;
 	    text-align: center;
@@ -194,7 +199,7 @@ path {
 	.part2 .img-bg .img, .part3 .img-bg .img {
 		min-width: 100%;
 		background-size: 1500px;
-    	background-position-x: -500px;
+    	background-position-x: -470px;
 	}
 	.bord-box, .part3 .bord-box{
 		padding: 30px;
@@ -203,22 +208,82 @@ path {
 		transform: translate(-40%, -50%);
 	    background-color: rgba(255,255,255,0.8);
 	}
-}
-@media screen and (max-width: 768px){
-
 	.flower{
 		display: none;
 	}
 }
+@media screen and (max-width: 768px){
+	section{
+		min-height: initial;
+	}
+	.part1{
+		justify-content: flex-end;
+		background-size: 1355px;
+    	background-position-x: -450px;
+	}
+	.part1 .content{
+		position: relative;
+		top: 0;
+    	right: 0;
+	}
+	.part2 .img-bg .img, .part3 .img-bg .img{
+		background-size: cover;
+	    background-position-x: initial;
+	}
+	.part2 .img-bg .img, .part3 .img-bg .img,
+	.part2 .img-bg .bord-box, .part3 .img-bg .bord-box{
+		position: static;
+		width: 100%;
+		transform: initial;
+	}
+	.part2 .img-bg, .part3 .img-bg {
+		height: initial;
+	}
+	.part2 {
+		padding-bottom: 0;
+	}
+	.part2 .content{
+		width: 100%;
+		padding: 40px;
+	}
+	.part3{
+		padding: 0;
+	}
+	.bord-box{
+		text-align: center;
+		max-width: 100%;
+		padding: 40px;
+	}
+	.part2 .img-bg .img, .part3 .img-bg .img{
+		min-height: 200px;
+	}
+}
 @media screen and (max-width: 640px){
+	.part1 .content{
+		width: 50%;
+	}
 	.bord-box {
 	    width: 100%;
-	    padding: 25px;
 	}
 	.part3 h2 {
 		margin-top: 25px
 	}
 	.part4 .bord-box{
 		justify-content: center;
+	}
+}
+@media screen and (max-width: 640px){
+	.part1{
+		background-image: initial;
+		flex-direction: column;
+	}
+	.part1 .content{
+		width: 100%;
+	}
+	.mobile{
+		min-width: 100%;
+    	min-height: 200px;
+		background-image: url(../img/about_part1.JPG);
+		background-size: cover;
 	}
 }
