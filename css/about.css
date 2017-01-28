@@ -262,7 +262,10 @@ path {
 	.part1 .content{
 		width: 50%;
 	}
-	.bord-box {
+	.bord-box, .part3 .bord-box{
+	    min-width: initial;
+	}
+	.part3 .bord-box{
 	    width: 100%;
 	}
 	.part3 h2 {
@@ -270,6 +273,7 @@ path {
 	}
 	.part4 .bord-box{
 		justify-content: center;
+		min-width: initial;
 	}
 }
 @media screen and (max-width: 640px){
