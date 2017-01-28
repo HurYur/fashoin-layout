@@ -203,7 +203,6 @@ path {
 	}
 	.bord-box, .part3 .bord-box{
 		padding: 30px;
-		min-width: 400px;
 		left: 65%;
 		transform: translate(-40%, -50%);
 	    background-color: rgba(255,255,255,0.8);
@@ -254,6 +253,9 @@ path {
 		max-width: 100%;
 		padding: 40px;
 	}
+	.bord-box, .part3 .bord-box{
+	    min-width: initial;
+	}
 	.part2 .img-bg .img, .part3 .img-bg .img{
 		min-height: 200px;
 	}
@@ -261,9 +263,6 @@ path {
 @media screen and (max-width: 640px){
 	.part1 .content{
 		width: 50%;
-	}
-	.bord-box, .part3 .bord-box{
-	    min-width: initial;
 	}
 	.part3 .bord-box{
 	    width: 100%;
