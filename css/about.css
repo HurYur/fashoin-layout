@@ -281,7 +281,7 @@ path {
 	}
 	.mobile{
 		min-width: 100%;
-    	min-height: 1000px;
+    	min-height: 200px;
 		background-image: url(../img/about_part1.JPG);
 		background-size: cover;
 	}
