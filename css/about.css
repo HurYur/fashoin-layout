@@ -203,6 +203,7 @@ path {
 	}
 	.bord-box, .part3 .bord-box{
 		padding: 30px;
+		min-width: 400px;
 		left: 65%;
 		transform: translate(-40%, -50%);
 	    background-color: rgba(255,255,255,0.8);
@@ -261,8 +262,12 @@ path {
 	}
 }
 @media screen and (max-width: 640px){
+	.part1{
+		background-image: initial;
+		flex-direction: column;
+	}
 	.part1 .content{
-		width: 50%;
+		width: 100%;
 	}
 	.part3 .bord-box{
 	    width: 100%;
@@ -274,18 +279,9 @@ path {
 		justify-content: center;
 		min-width: initial;
 	}
-}
-@media screen and (max-width: 640px){
-	.part1{
-		background-image: initial;
-		flex-direction: column;
-	}
-	.part1 .content{
-		width: 100%;
-	}
 	.mobile{
 		min-width: 100%;
-    	min-height: 200px;
+    	min-height: 1000px;
 		background-image: url(../img/about_part1.JPG);
 		background-size: cover;
 	}
