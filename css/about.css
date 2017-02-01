@@ -263,11 +263,16 @@ path {
 }
 @media screen and (max-width: 640px){
 	.part1{
-		background-image: initial;
-		flex-direction: column;
+		justify-content: center;
+	    align-items: flex-end;
+	    min-height: 400px;
+	    background-size: cover;
+	    background-position-x: -50px;
 	}
 	.part1 .content{
-		width: 100%;
+		width: 95%;
+	    padding: 10px 0;
+	    margin-bottom: 25px;
 	}
 	.part3 .bord-box{
 	    width: 100%;
@@ -279,10 +284,10 @@ path {
 		justify-content: center;
 		min-width: initial;
 	}
-	.mobile{
+/*	.mobile{
 		min-width: 100%;
     	min-height: 200px;
 		background-image: url(../img/about_part1.JPG);
 		background-size: cover;
-	}
+	}*/
 }
