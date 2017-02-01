@@ -63,7 +63,7 @@
 		<!-- right -->
 		<div class="content-boxes">
 			<div id="mini-box-text"  class="box">
-				<h2>Standart text</h2>
+				<h3>We recognize that people learn best at certain times: some people are early birds others are night owls. No matter what time of day or night, we are open 24 hours to cater to your learning needs so that you can immediately accelerate the pace at which you achieve the results you desire.</h3>
 			</div>
 			<div class="mini-boxes">
 				<div id="0" class="mini-box wow fadeInUp">
@@ -107,7 +107,7 @@ var someText = [
 "As an ultimate symbol for your newly emerging skills, upon completion of the program, you will receive an email of your professional certification."];
 for (var i = 0; i < document.getElementsByClassName('mini-box').length; i++) {
 	document.getElementsByClassName('mini-box')[i].addEventListener('mouseover', function(){
-        document.getElementById('mini-box-text').innerHTML = '<h3>'+ someText[this.id] + '</h3grey>';
+        document.getElementById('mini-box-text').innerHTML = '<h3>'+ someText[this.id] + '</h3>';
         document.getElementById('about-background').className += " colored";
 	});
 	document.getElementsByClassName('mini-box')[i].addEventListener('mouseout', function(){

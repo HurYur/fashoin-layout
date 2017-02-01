@@ -184,12 +184,14 @@ a{
 }
 .btn{
     font-size: 25px;
-	color: #F8BBD0;
-	background-color: initial;
-	border: 0;
+    color: #F8BBD0;
+    border: 0;
     border-bottom: 2px solid white;
     border-top: 2px solid white;
-	background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 .btn a{
 	padding: 5px 10px;
@@ -198,6 +200,7 @@ a{
 .about .content-boxes{
 	width: 50%;
 	padding: 100px 40px 20px 40px;
+	position: relative;
 }
 .about .content h2{
 	color: white;
@@ -219,14 +222,16 @@ a{
 .about .mini-boxes{
 	flex-wrap: wrap;
 	text-align: center;
+	/* align-items: inherit; */
 }
 .about .mini-box{
-	color: #F8BBD0;
+	color: white;
 	width: 30%;
-	margin-bottom: 20px; 
+	margin-bottom: 20px;
 	background-color: rgba(0,0,0,0.4);
-	border: 1px solid #F8BBD0;
-    padding: 15px;
+	border: 1px solid white;
+	padding: 15px;
+	max-height: 210px;
 }
 .about .mini-box img{
 	width: 84px;
