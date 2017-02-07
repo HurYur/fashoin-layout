@@ -101,7 +101,8 @@ section{
 }
 .second .main-img{
 	width: 960px;
-	margin: 0 auto;
+	transform: translateX(-50%);
+    left: 55%;
 	position: relative;
 }
 .second .main-img .one{
@@ -221,6 +222,10 @@ path {
     stroke-width: 3.5px;
     stroke-linecap: round;
     stroke-linejoin: round;
+}
+.fourth{
+	background-image: url(../img/getClassS4Bg.jpg);
+	background-size: 100% 100%;
 }
 .fourth h2{
 	font-size: 40px;
