@@ -53,27 +53,34 @@ section{
 .top .logo img{
 	height: 50px;
 }
-.top .top-panel{
+.top .navbar-default{
 	margin-top: 10px;
-	position: fixed;
-    width: 100%;
-    z-index: 100;
 	background-color: rgba(255,255,255,0.6);
 	align-items: center;
-	padding: 5px 20px;
-}
-.top .main-nav li{
-	display: inline;
-	margin-left: 20px; 
+	padding: 0 20px;
+    border: 0;
 }
 a{
 	color: #F8BBD0;
 	text-decoration: none;
 	display: inline-block;
 }
-.top .main-nav a{
+.top .navbar-nav li a{
+	color: #fff;
 	text-transform: uppercase;
 	font-weight: bold;
+	font-size: 16px;
+	padding: 25px 15px;
+}
+.top .navbar-nav .active a{
+	background-color: initial;
+}
+.top .dropdown-menu{
+	background-color: rgba(248, 187, 208, 0.6);
+}
+.top .dropdown-menu li a{
+	padding: 15px;
+	color: black;
 }
 .top .box{
 	width: 300px;
@@ -124,26 +131,26 @@ a{
     position: relative;
 }
 #macaroon1{
-	right: 200px;
+	right: 300px;
 }
 #macaroon2{
-	right: 80px;
+	right: 180px;
     top: 170px;
 }
 #macaroon3{
 	width: 170px;
-    right: 460px;
+    right: 560px;
     top: 320px;
 }
 #macaroon4{
 	width: 220px;
-    top: 370px;
-    right: 260px;
+    top: 405px;
+    right: 360px;
 }
 #macaroon5{
 	width: 250px;
-    top: 320px;
-    right: 80px;
+    top: 370px;
+    right: 170px;
 }
 .macaroons img{
 	width: 180px;
@@ -156,22 +163,23 @@ a{
     color: black;
     font-weight: bold;
     text-align: center;
+    z-index: 10;
 }
 .macaroons .text.first{
 	top: 15vh;
     right: 50px;
 }
 .macaroons .text.second{
-	top: 65vh;
-    right: 50px;
+	top: 55vh;
+    right: 0px;
 }
 .macaroons .text.third{
     top: 40vh;
-    right: 550px;
+    right: 600px;
 }
 .macaroons .text.fourth{
-	top: 80vh;
-	right: 850px;
+	top: 90vh;
+	right: 600px;
 }
 .about-background{
 	background-image: url(../img/aboutBg.jpg);
@@ -222,7 +230,6 @@ a{
 .about .mini-boxes{
 	flex-wrap: wrap;
 	text-align: center;
-	/* align-items: inherit; */
 }
 .about .mini-box{
 	color: white;
@@ -294,7 +301,26 @@ a{
 	}
 
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+	.top .box{
+		left: 50%;
+		bottom: 70px;
+		transform: translateX(-50%);
+	}
+	.top .navbar-default{
+		background-color: white;
+		margin: 0;
+	}
+	.top .navbar-default li{
+		border-bottom: 1px solid #e7e7e7;
+	}
+	.top .navbar-default li:last-child{
+		border-bottom: 0;
+	}
+	.top .navbar-nav li a{
+		padding: 10px 15px;
+		color: black;
+	}
 	.about .content{
 		display: none;
 	}
@@ -311,4 +337,5 @@ a{
 		background-image: url(../img/aboutBg.jpg);
 		background-size: cover;
 	}
+
 }
