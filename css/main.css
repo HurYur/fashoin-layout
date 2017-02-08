@@ -256,6 +256,11 @@ a{
 	animation: pulse 1.25s infinite;
 	margin: 50px 0;
 }
+.about .mobile-content{
+	display: none;
+}
+
+/* RWD start*/
 @media screen and (max-width: 1024px) {
 	.about .content,
 	.about .content-boxes{
@@ -299,9 +304,8 @@ a{
 	.about .btn{
 		margin: 0;
 	}
-
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 	.top .box{
 		left: 50%;
 		bottom: 70px;
@@ -321,21 +325,27 @@ a{
 		padding: 10px 15px;
 		color: black;
 	}
-	.about .content{
-		display: none;
+	.about{
+		display: initial;
+	}
+	.about .slick-next{
+		right: 10px;
+	}
+	.about .slick-prev{
+		left: 10px;
 	}
 	.about .content, .about .content-boxes{
-		width: 100%;
+		display: none;
 	}
-	.about .content-boxes{
-		padding-top: 135px;
+	.about .mobile-content{
+		display: block;
+		padding: 200px 15vw;
 	}
 	.about .mini-box {
-		width: 45%;
+		height: 70vw;
+		display: flex;
+    	justify-content: center;
+    	flex-flow: wrap column;
+    	align-items: center;
 	}
-	.about{
-		background-image: url(../img/aboutBg.jpg);
-		background-size: cover;
-	}
-
 }
