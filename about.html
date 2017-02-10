@@ -77,7 +77,22 @@
 			<img src="img/flower.png" alt="">
 		</div>
 	</section>
-
+<script>
+	document.querySelectorAll('.bord-box')[0].addEventListener('mouseover', function(){
+		document.querySelectorAll('.img')[0].className += " colored";
+	});
+	document.querySelectorAll('.bord-box')[0].addEventListener('mouseout', function(){
+		console.log(document.querySelectorAll('.img')[0].className)
+	    document.querySelectorAll('.img')[0].className = "img";
+	});
+		document.querySelectorAll('.bord-box')[1].addEventListener('mouseover', function(){
+		document.querySelectorAll('.img')[1].className += " colored";
+	});
+	document.querySelectorAll('.bord-box')[1].addEventListener('mouseout', function(){
+		console.log(document.querySelectorAll('.img')[1].className)
+	    document.querySelectorAll('.img')[1].className = "img";
+	});
+</script>
 <script>                      
 var wow = new WOW(
   {
