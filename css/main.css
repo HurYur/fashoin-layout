@@ -30,32 +30,24 @@ section{
     flex-wrap: wrap;
 }
 .top-background{
+	background-image: url('../img/topBg.jpg');
 	background-size: cover;
 }
 .top-background, .about-background{
-    filter: gray;
-	filter: grayscale(1);
-	-webkit-filter: grayscale(1);
-	background-image: url('../img/topBg.jpg');
 	height: 100%;
 	width: 100%;
 	position: absolute;
 	z-index: -1;
 }
-
-/* Disable grayscale on hover */
-.top-background.colored,
-.about-background.colored{
-	filter: none;
-	-webkit-filter: grayscale(0);
-	transition: all 0.5s ease;
+.top .navbar-brand img{
+	height: 70px;
 }
-.top .logo img{
-	height: 50px;
+.top .navbar-brand{
+	padding: 0 20px;
 }
 .top .navbar-default{
 	margin-top: 10px;
-	background-color: rgba(255,255,255,0.6);
+	background-color: rgba(0,0,0,0.6);
 	align-items: center;
 	padding: 0 20px;
     border: 0;
@@ -69,11 +61,15 @@ a:hover, a:focus {
 	color: white;
 }
 .top .navbar-nav li a{
-	color: black;
+	color: white;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 16px;
 	padding: 25px 15px;
+}
+.top .navbar-nav li a:hover{
+	color: black;
+	background-color: rgb(245,245,245);
 }
 .top .navbar-nav .active a{
 	background-color: initial;
@@ -85,6 +81,25 @@ a:hover, a:focus {
 	padding: 15px;
 	color: black;
 }
+.top h1{
+	color: white;
+	text-transform: uppercase;
+	margin: 0;
+}
+.top .icons-bar{
+	position: absolute;
+    bottom: 50px;
+	background-color: rgba(0,0,0,0.6);
+	width: 100%;
+	text-align: center;
+	padding: 7px 0;
+}
+
+.top .icons-box img{
+	width: 150px;
+	display: inline-block;
+}
+
 .top .box{
 	display: flex;
 	width: 300px;
@@ -113,7 +128,7 @@ a:hover, a:focus {
 	text-align: center;
 	font-size: 25px;   
 	position: absolute;
-    bottom: 0;
+    bottom: -20px;
     left: 50%;
     transform: translateY(-50%);
 }
@@ -161,12 +176,12 @@ a:hover, a:focus {
     top: 320px;
 }
 #macaroon4{
-	width: 220px;
+	width: 200px;
     top: 405px;
     right: 360px;
 }
 #macaroon5{
-	width: 250px;
+	width: 190px;
     top: 370px;
     right: 170px;
 }
@@ -200,10 +215,20 @@ a:hover, a:focus {
 	right: 600px;
 }
 .about-background{
+    filter: gray;
+	filter: grayscale(1);
+	-webkit-filter: grayscale(1);
 	background-image: url(../img/aboutBg.jpg);
     padding: 40px 30px;
     background-position-x: -300px;
     background-repeat: no-repeat;
+}
+
+/* Disable grayscale on hover */
+.about-background.colored{
+	filter: none;
+	-webkit-filter: grayscale(0);
+	transition: all 0.5s ease;
 }
 .about h2{
 	font-family: Arial;
@@ -239,11 +264,12 @@ a:hover, a:focus {
     display: flex;
     align-items: center;
 	width: 100%;
-    height: 150px;
+    height: 130px;
     margin: 10px 0;
-    background-color: rgba(248, 187, 208, 0.8);
+    background-color: rgba(0,0,0,0.4);
     text-align: center;
     padding: 40px;
+    color: white;
 }
 .about .mini-boxes{
 	flex-wrap: wrap;
@@ -255,16 +281,19 @@ a:hover, a:focus {
 	margin-bottom: 20px;
 	background-color: rgba(0,0,0,0.4);
 	border: 1px solid white;
-	padding: 15px;
-	max-height: 210px;
+    padding: 15px;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
 }
 .about .mini-box img{
-	width: 84px;
+	width: 100px;
     transform: scale(0.85);
     transition: all .3s ease-in-out;
 }
-.about .mini-box img:hover{
-	width: 84px;
+.about .mini-box:hover img{
+	width: 100px;
     transform: scale(1);
 }
 
@@ -330,7 +359,7 @@ a:hover, a:focus {
 		transform: translateX(-50%);
 	}
 	.top .navbar-default{
-		background-color: white;
+		background-color: black;
 		margin: 0;
 	}
 	.top .navbar-default li{
@@ -360,7 +389,7 @@ a:hover, a:focus {
 		padding: 200px 15vw;
 	}
 	.about .mini-box {
-		height: 70vw;
+		height: 200px;
 		display: flex;
     	justify-content: center;
     	flex-flow: wrap column;
