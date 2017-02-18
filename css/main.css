@@ -66,10 +66,29 @@ a:hover, a:focus {
 	font-weight: bold;
 	font-size: 16px;
 	padding: 25px 15px;
+  	position: relative;
 }
 .top .navbar-nav li a:hover{
-	color: black;
-	background-color: rgb(245,245,245);
+	color: white;
+}
+.top .navbar-nav li > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.top .navbar-nav li > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 .top .navbar-nav .active a{
 	background-color: initial;
@@ -154,8 +173,20 @@ a:hover, a:focus {
 	padding: 50px;
 	position: relative;
 	overflow: hidden;
-	background-image: url(../img/macaroonBg.jpg);
-	background-size: cover;
+
+    background: #e3ecf7;
+    background: -moz-linear-gradient(top,  #e3ecf7 0%, #e1eaf9 47%, #c7d7f1 74%, #c7d4f5 100%);
+    background: -webkit-linear-gradient(top,  #e3ecf7 0%,#e1eaf9 47%,#c7d7f1 74%,#c7d4f5 100%);
+    background: linear-gradient(to bottom,  #e3ecf7 0%,#e1eaf9 47%,#c7d7f1 74%,#c7d4f5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3ecf7', endColorstr='#c7d4f5',GradientType=0 );
+
+/*
+	background: #fcf4fa; / Old browsers /
+    background: -moz-linear-gradient(top,  #fcf4fa 0%, #f5cde2 51%, #f3bdd8 85%, #f3b7d7 96%); / FF3.6-15 /
+    background: -webkit-linear-gradient(top,  #fcf4fa 0%,#f5cde2 51%,#f3bdd8 85%,#f3b7d7 96%); / Chrome10-25,Safari5.1-6 /
+    background: linear-gradient(to bottom,  #fcf4fa 0%,#f5cde2 51%,#f3bdd8 85%,#f3b7d7 96%); / W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ /
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcf4fa', endColorstr='#f3b7d7',GradientType=0 ); / IE6-9 /
+	background-size: cover;*/
 }
 .macaroons .fly{
 	width: 960px;
@@ -211,27 +242,20 @@ a:hover, a:focus {
     right: 600px;
 }
 .macaroons .text.fourth{
-	top: 90vh;
+	top: 85vh;
 	right: 600px;
 }
 .about-background{
-    filter: gray;
-	filter: grayscale(1);
-	-webkit-filter: grayscale(1);
 	background-image: url(../img/aboutBg.jpg);
     padding: 40px 30px;
     background-position-x: -300px;
     background-repeat: no-repeat;
 }
-
-/* Disable grayscale on hover */
-.about-background.colored{
-	filter: none;
-	-webkit-filter: grayscale(0);
-	transition: all 0.5s ease;
-}
 .about h2{
 	font-family: Arial;
+}
+.about h3{
+	font-size: 18px;
 }
 .btn{
     font-size: 25px;
@@ -353,6 +377,12 @@ a:hover, a:focus {
 	}
 }
 @media screen and (max-width: 768px) {
+	.navbar-default .navbar-collapse{
+		border: 0;
+	}
+	.top .navbar-brand img {
+    	height: 50px;
+	}
 	.top .box{
 		left: 50%;
 		bottom: 70px;
@@ -370,7 +400,6 @@ a:hover, a:focus {
 	}
 	.top .navbar-nav li a{
 		padding: 10px 15px;
-		color: black;
 	}
 	.about{
 		display: initial;

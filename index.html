@@ -44,7 +44,7 @@
 		</nav>
 		<div class="icons-bar">
 			<h1>how to become a fashion stylist</h1>
-			<div class="icons-box">
+			<div class="icons-box wow fadeInUp">
 				<img src="img/mainTopIcon1.png" alt="get started">
 				<img src="img/mainTopIcon2.png" alt="for just 1$">
 				<img src="img/mainTopIcon3.png" alt="free master class">
@@ -169,10 +169,6 @@ var someText = [
 for (var i = 0; i < document.getElementsByClassName('mini-box').length; i++) {
 	document.getElementsByClassName('mini-box')[i].addEventListener('mouseover', function(){
         document.getElementById('mini-box-text').innerHTML = '<h3>'+ someText[this.id] + '</h3>';
-        document.getElementById('about-background').className += " colored";
-	});
-	document.getElementsByClassName('mini-box')[i].addEventListener('mouseout', function(){
-	    document.getElementById('about-background').className = "about-background";
 	});
 };
 </script>
