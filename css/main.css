@@ -279,6 +279,7 @@ a:hover, a:focus {
     position: absolute;
     right: 0;
     bottom: 0;
+    border-radius: 8px;
 }
 .btn a{
 	padding: 5px 10px;
@@ -321,8 +322,8 @@ a:hover, a:focus {
 	color: white;
 	width: 30%;
 	margin-bottom: 20px;
-	background-color: rgba(0,0,0,0.4);
-	border: 1px solid white;
+	border: 1px solid rgba(255,255,255, 0.7);
+	background-color: rgba(0,0,0, 0.2);
     padding: 15px;
     display: flex;
     flex-flow: wrap column;
@@ -355,12 +356,51 @@ a:hover, a:focus {
 		background-color: black;
 	}
 }
-@media screen and (max-width: 1024px) {
-	.top .top-backgorund{
-		margin-top: 20px;
-	    max-height: 550px;
-	    overflow: hidden;
+@media screen and (max-width: 1024px) and (min-height: 1024px)
+, screen and (max-width: 767px) {
+
+	.top .navbar-default{
+		margin-top: 0;
+    	background-color: rgba(0,0,0, 0.9);
 	}
+	.top .top-background{
+		background-position-y: 0;
+	    margin-top: 65px;
+	    min-height: 415px;
+	}
+	.top .top-background, .top .icons-bar{
+		position: static;
+	}
+	.top, .top .icons-bar{
+		background-color: #ababab;
+	}
+	.top .icons-bar{
+		display: flex;
+	}
+	.top .icons-box{
+		padding: 35px 50px; 
+		width: 50%
+	}
+	.top .icons-bar h1{
+		padding: 35px 55px;
+    	font-size: 60px;
+    	font-family: arial;
+    	align-self: center;
+		width: 50%
+	}
+	.top .icons-box img {
+		width: 220px;
+    	display: block;
+    	margin: 0 auto;
+	}
+
+	.top .arrow{
+		position: static;
+		transform: initial;
+	}
+}
+
+@media screen and (max-width: 1024px){
 	.about .content,
 	.about .content-boxes{
 		width: 50%;
@@ -372,6 +412,7 @@ a:hover, a:focus {
 		width: 60%
 	}
 }
+
 @media screen and (max-width: 960px) {
 	.macaroons{
 		padding: 50px 0;
@@ -405,39 +446,6 @@ a:hover, a:focus {
 	}
 }
 @media screen and (max-width: 768px) {
-
-	.top .navbar-default{
-		margin-top: 0;
-    	background-color: black;
-	}
-	.top .top-background{
-		background-position-y: 0;
-	    margin-top: 65px;
-	    min-height: 415px;
-	}
-	.top .top-background, .top .icons-bar{
-		position: static;
-	}
-	.top, .top .icons-bar{
-		background-color: #ababab;
-	}
-	.top .icons-box{
-		padding: 35px 50px; 
-	}
-	.top .icons-bar{
-		display: flex;
-	}
-	.top .icons-bar h1{
-		padding: 35px 55px;
-    	font-size: 60px;
-    	font-family: arial;
-    	align-self: center;
-	}
-	.top .icons-box img {
-		width: 220px;
-    	display: block;
-    	margin: 0 auto;
-	}
 	.about{
 		display: initial;
 	}
@@ -453,7 +461,7 @@ a:hover, a:focus {
 	.about .mobile-content{
 		display: block;
 		padding: 0 15vw;
-		transform: translateY(-100%);
+		transform: translateY(-50%);
 	}
 	.about .mini-box {
 		height: 200px;
@@ -461,6 +469,10 @@ a:hover, a:focus {
     	justify-content: center;
     	flex-flow: wrap column;
     	align-items: center;
+	}
+
+	.about .about-background {
+    	background-position-y: 0px;
 	}
 }
 
@@ -495,7 +507,7 @@ a:hover, a:focus {
 		background-color: white;
 	}
 	.top .navbar.navbar-default{
-		background-color: black;
+		background-color: rgba(0,0,0, 0.9);
 		margin: 0;
 	}
 	.top .navbar-collapse .navbar-nav{
@@ -515,6 +527,9 @@ a:hover, a:focus {
 		margin-top: 45px;
 		min-height: initial;
 	}
+	.top .icons-box {
+		width: 100%;
+	}
 	.top .icons-box img {
 		width: 250px;
 	}
@@ -522,12 +537,9 @@ a:hover, a:focus {
 		flex-direction: column;
 	}
 	.top .icons-bar h1{
+		width: 100%;
 		font-size: 40px;
 		padding: 30px 90px
-	}
-	.top .arrow{
-		position: static;
-		transform: initial;
 	}
 }
 
