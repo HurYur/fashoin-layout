@@ -23,21 +23,23 @@ button a{
 section{
 	min-height: 100vh;
 }
+.top{
+	background-color: #ababab;
+	z-index: -1;
+}
 .top .top-panel, .about,
 .about .mini-boxes, .content-boxes{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.top-background{
-	background-image: url('../img/topBg.jpg');
-	background-size: cover;
+.top .top-background img{
+	width: 100%;
 }
+
 .top-background, .about-background{
-	height: 100%;
 	width: 100%;
 	position: absolute;
-	z-index: -1;
 }
 .top .navbar-brand img{
 	height: 70px;
@@ -46,11 +48,15 @@ section{
 	padding: 0 20px;
 }
 .top .navbar-default{
-	margin-top: 10px;
+	margin-top: 20px;
 	background-color: rgba(0,0,0,0.6);
 	align-items: center;
 	padding: 0 20px;
     border: 0;
+}
+.top .nav.navbar-nav{
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 a{
 	color: #F8BBD0;
@@ -65,7 +71,7 @@ a:hover, a:focus {
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 16px;
-	padding: 25px 15px;
+	padding: 10px 15px;
   	position: relative;
 }
 .top .navbar-nav li a:hover{
@@ -147,9 +153,9 @@ a:hover, a:focus {
 	text-align: center;
 	font-size: 25px;   
 	position: absolute;
-    bottom: -20px;
+    bottom: 0px;
     left: 50%;
-    transform: translateY(-50%);
+    transform: translateX(-50%);
 }
 /* Arrow animation*/
 @keyframes bounce {
@@ -167,6 +173,18 @@ a:hover, a:focus {
   animation: bounce 2s ease infinite;
   font-size: 30px;
 }
+.top-background{
+	filter: gray;
+	filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+	transition: all 0.5s ease;
+}
+
+/* Disable grayscale on hover */
+.top-background.colored{
+	filter: none;
+	-webkit-filter: grayscale(0);
+}
 
 .macaroons{
 	min-height: 840px;
@@ -179,14 +197,6 @@ a:hover, a:focus {
     background: -webkit-linear-gradient(top,  #e3ecf7 0%,#e1eaf9 47%,#c7d7f1 74%,#c7d4f5 100%);
     background: linear-gradient(to bottom,  #e3ecf7 0%,#e1eaf9 47%,#c7d7f1 74%,#c7d4f5 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3ecf7', endColorstr='#c7d4f5',GradientType=0 );
-
-/*
-	background: #fcf4fa; / Old browsers /
-    background: -moz-linear-gradient(top,  #fcf4fa 0%, #f5cde2 51%, #f3bdd8 85%, #f3b7d7 96%); / FF3.6-15 /
-    background: -webkit-linear-gradient(top,  #fcf4fa 0%,#f5cde2 51%,#f3bdd8 85%,#f3b7d7 96%); / Chrome10-25,Safari5.1-6 /
-    background: linear-gradient(to bottom,  #fcf4fa 0%,#f5cde2 51%,#f3bdd8 85%,#f3b7d7 96%); / W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ /
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcf4fa', endColorstr='#f3b7d7',GradientType=0 ); / IE6-9 /
-	background-size: cover;*/
 }
 .macaroons .fly{
 	width: 960px;
@@ -246,10 +256,12 @@ a:hover, a:focus {
 	right: 600px;
 }
 .about-background{
+	height: 100%;
 	background-image: url(../img/aboutBg.jpg);
     padding: 40px 30px;
     background-position-x: -300px;
     background-repeat: no-repeat;
+    background-size: 1900px;
 }
 .about h2{
 	font-family: Arial;
@@ -287,6 +299,7 @@ a:hover, a:focus {
 .about .box{
     display: flex;
     align-items: center;
+    justify-content: center;
 	width: 100%;
     height: 130px;
     margin: 10px 0;
@@ -294,6 +307,11 @@ a:hover, a:focus {
     text-align: center;
     padding: 40px;
     color: white;
+}
+.about .box .standart{
+	font-family: Devanagari;
+    font-size: 40px;
+    text-transform: uppercase;
 }
 .about .mini-boxes{
 	flex-wrap: wrap;
@@ -332,7 +350,17 @@ a:hover, a:focus {
 }
 
 /* RWD start*/
+@media screen and (max-width: 1096px) {
+	.top .icons-bar{
+		background-color: black;
+	}
+}
 @media screen and (max-width: 1024px) {
+	.top .top-backgorund{
+		margin-top: 20px;
+	    max-height: 550px;
+	    overflow: hidden;
+	}
 	.about .content,
 	.about .content-boxes{
 		width: 50%;
@@ -377,29 +405,38 @@ a:hover, a:focus {
 	}
 }
 @media screen and (max-width: 768px) {
-	.navbar-default .navbar-collapse{
-		border: 0;
-	}
-	.top .navbar-brand img {
-    	height: 50px;
-	}
-	.top .box{
-		left: 50%;
-		bottom: 70px;
-		transform: translateX(-50%);
-	}
+
 	.top .navbar-default{
-		background-color: black;
-		margin: 0;
+		margin-top: 0;
+    	background-color: black;
 	}
-	.top .navbar-default li{
-		border-bottom: 1px solid #e7e7e7;
+	.top .top-background{
+		background-position-y: 0;
+	    margin-top: 65px;
+	    min-height: 415px;
 	}
-	.top .navbar-default li:last-child{
-		border-bottom: 0;
+	.top .top-background, .top .icons-bar{
+		position: static;
 	}
-	.top .navbar-nav li a{
-		padding: 10px 15px;
+	.top, .top .icons-bar{
+		background-color: #ababab;
+	}
+	.top .icons-box{
+		padding: 35px 50px; 
+	}
+	.top .icons-bar{
+		display: flex;
+	}
+	.top .icons-bar h1{
+		padding: 35px 55px;
+    	font-size: 60px;
+    	font-family: arial;
+    	align-self: center;
+	}
+	.top .icons-box img {
+		width: 220px;
+    	display: block;
+    	margin: 0 auto;
 	}
 	.about{
 		display: initial;
@@ -415,7 +452,8 @@ a:hover, a:focus {
 	}
 	.about .mobile-content{
 		display: block;
-		padding: 200px 15vw;
+		padding: 0 15vw;
+		transform: translateY(-100%);
 	}
 	.about .mini-box {
 		height: 200px;
@@ -423,5 +461,79 @@ a:hover, a:focus {
     	justify-content: center;
     	flex-flow: wrap column;
     	align-items: center;
+	}
+}
+
+
+@media screen and (max-width: 767px) {
+
+	.navbar-toggle, .navbar-default .navbar-collapse{
+		border: 0;
+  		max-height: none;
+  		border: 0;
+	}
+	.navbar-default .navbar-toggle:hover, 
+	.navbar-default .navbar-toggle:focus{
+		background-color: black;
+	}
+	.collapsing {
+	  position: relative;
+	  height: 0;
+	  overflow: hidden;
+	  -webkit-transition: height .5s ease;
+	       -o-transition: height .5s ease;
+	          transition: height .5s ease;
+	}
+	.top .navbar-brand img {
+    	height: 50px;
+	    position: absolute;
+	    left: 50%;
+	    transform: translateX(-50%);
+	}
+
+	.top .navbar-toggle .icon-bar{
+		background-color: white;
+	}
+	.top .navbar.navbar-default{
+		background-color: black;
+		margin: 0;
+	}
+	.top .navbar-collapse .navbar-nav{
+  		padding: 0 30px;
+		min-height: 100vh !important;
+	}
+	.top .navbar-default li{
+		border-bottom: 1px solid #333;
+	}
+	.top .navbar-default li:last-child{
+		border-color: #c0c0c0;
+	}
+	.top .navbar-nav li a{
+		padding: 10px 15px;
+	}
+	.top .top-background{
+		margin-top: 45px;
+		min-height: initial;
+	}
+	.top .icons-box img {
+		width: 250px;
+	}
+	.top .icons-bar{
+		flex-direction: column;
+	}
+	.top .icons-bar h1{
+		font-size: 40px;
+		padding: 30px 90px
+	}
+	.top .arrow{
+		position: static;
+		transform: initial;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.top .icons-bar h1{
+		font-size: 40px;
+		padding: 25px 70px
 	}
 }
